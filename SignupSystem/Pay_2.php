@@ -27,6 +27,7 @@ echo '<br>';
 echo $customer['id'];
 echo '<br>';
 
+if (isset($customer)){
 	// Comment out the above line if not using Composer
 	// require("<PATH TO>/sendgrid-php.php");
 	// If not using Composer, uncomment the above line and
@@ -50,7 +51,7 @@ echo '<br>';
 	} catch (Exception $e) {
 	    echo 'Caught exception: '. $e->getMessage() ."\n";
 	}
-
+};
 
 ?>
 
