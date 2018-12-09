@@ -5,8 +5,8 @@ session_start();
 require_once ('C:\Users\Larz\vendor\autoload.php');
 //require_once('C:\xampp\htdocs\SignupSystem\vendor\autoload.php');
 	
-\Stripe\Stripe::setApiKey("pk_test_abGaLC6gGQPIqN7W6WNlLQ9o");
-//\Stripe\Stripe::setApiKey("sk_test_hnnDa6e0OTXBDQ0yjm7Jx7oc");
+\Stripe\Stripe::setApiKey("THE_API_KEY");
+//\Stripe\Stripe::setApiKey("THE_API_KEY");
 
 
 // Retrieve the request's body and parse it as JSON:
@@ -30,7 +30,7 @@ if ($event_json->type=='customer.created')
 	// replacing <PATH TO> with the path to the sendgrid-php.php file,
 	// which is included in the download:
 	// https://github.com/sendgrid/sendgrid-php/releases
-	$apiKey='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';
+	$apiKey='THE_API_KEY';
 	$email = new \SendGrid\Mail\Mail(); 
 	$email->setFrom("msfk91@somaluganda.com", "Soma Luganda");
 	$email->setSubject("DO NOT REPLY: You Are Now a Member 2");
