@@ -2,12 +2,11 @@
 session_start();
 
 require_once ('C:\Users\Larz\vendor\autoload.php');
-//use Mailgun\Mailgun;
 //use SendGrid\SendGrid;
 //$SG = new \SendGrid\Mail\Mail();
 //var_dump($SG);
 
-\Stripe\Stripe::setApiKey("sk_test_hnnDa6e0OTXBDQ0yjm7Jx7oc");
+\Stripe\Stripe::setApiKey("THE_API_KEY");
 			               
 $stripeToken=$_POST['stripeToken'];
 $stripeEmail=$_POST['stripeEmail'];
@@ -27,7 +26,6 @@ $customer = \Stripe\Customer::create([
 echo '<br>';
 echo $customer['id'];
 echo '<br>';
-if (isset($customer)){
 
 	// Comment out the above line if not using Composer
 	// require("<PATH TO>/sendgrid-php.php");
@@ -36,7 +34,7 @@ if (isset($customer)){
 	// replacing <PATH TO> with the path to the sendgrid-php.php file,
 	// which is included in the download:
 	// https://github.com/sendgrid/sendgrid-php/releases
-	$apiKey='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';
+	$apiKey='THE_API_KEY';
 	$email = new \SendGrid\Mail\Mail(); 
 	$email->setFrom("msfk91@somaluganda.com", "Soma Luganda");
 	$email->setSubject("DO NOT REPLY: You Are Now a Member");
@@ -53,9 +51,6 @@ if (isset($customer)){
 	    echo 'Caught exception: '. $e->getMessage() ."\n";
 	}
 
-};
 
 ?>
 
-
-2415 Baker Rd. NW, Atlanta, GA 30318
